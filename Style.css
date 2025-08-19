@@ -1,0 +1,132 @@
+/* === Style global === */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background: #f4f6f9;
+  color: #333;
+}
+
+/* === Sidebar === */
+#sidebar {
+  width: 220px;
+  background: #0052cc;
+  color: white;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#sidebar h2 {
+  margin-top: 0;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+#sidebar ul li {
+  margin: 10px 0;
+}
+
+#sidebar ul li button {
+  width: 100%;
+  padding: 10px;
+  background: #0066ff;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#sidebar ul li button:hover {
+  background: #004bb5;
+}
+
+/* === Contenu === */
+#content {
+  flex: 1;
+  padding: 20px;
+}
+
+h1 {
+  color: #0052cc;
+}
+
+form label {
+  display: block;
+  margin: 10px 0;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  background: #0052cc;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #004bb5;
+}
+
+/* === Résultat === */
+#result {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 6px;
+}
+
+/* === Bouton Menu Mobile === */
+#menu-toggle {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: #0052cc;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* === Responsive pour iPhone === */
+@media (max-width: 768px) {
+  #sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    height: 100%;
+    transition: left 0.3s;
+    z-index: 999;
+  }
+
+  #sidebar.active {
+    left: 0;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+
+  #content {
+    margin-left: 0;
+    padding-top: 50px;
+  }
+}
