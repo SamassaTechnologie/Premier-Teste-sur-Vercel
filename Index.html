@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybercafé App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 📌 Bouton burger (mobile) -->
+  <button id="menu-toggle">☰ Menu</button>
+
+  <!-- 📌 Sidebar -->
+  <div id="sidebar">
+    <h2>📂 Catégories</h2>
+    <ul>
+      <li><button onclick="filterCategory('administratif')">📄 Administratif</button></li>
+      <li><button onclick="filterCategory('bancaire')">🏦 Bancaire</button></li>
+      <li><button onclick="filterCategory('certificat')">📜 Certificats</button></li>
+      <li><button onclick="filterCategory('fiscal')">💰 Fiscal</button></li>
+      <li><button onclick="filterCategory('autres')">➕ Autres</button></li>
+    </ul>
+  </div>
+
+  <!-- 📌 Contenu -->
+  <div id="content">
+    <h1>🖥️ Générateur de documents Cybercafé</h1>
+    <p>Choisissez un modèle et remplissez le formulaire.</p>
+
+    <!-- 📌 Zone formulaire -->
+    <form id="doc-form">
+      <label>Nom : <input type="text" name="nom"></label><br>
+      <label>Prénom : <input type="text" name="prenom"></label><br>
+      <label>Objet : <input type="text" name="objet"></label><br>
+      <label>Message : <textarea name="message"></textarea></label><br>
+      <button type="button" onclick="generateDocument()">📝 Générer</button>
+      <button type="button" onclick="generateWithAI()">🤖 Générer avec IA</button>
+    </form>
+
+    <!-- 📌 Zone résultat -->
+    <div id="result">
+      <h2>📄 Résultat</h2>
+      <div id="generated-doc"></div>
+      <button onclick="exportPDF()">📥 Exporter PDF</button>
+      <button onclick="exportWord()">📄 Exporter Word</button>
+      <button onclick="printDoc()">🖨️ Imprimer</button>
+    </div>
+  </div>
+
+  <!-- 📌 Scripts -->
+  <script src="script.js"></script>
+  <script src="export.js"></script>
+</body>
+</html>
