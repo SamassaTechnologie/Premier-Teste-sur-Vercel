@@ -1,0 +1,26 @@
+{
+  "name": "cybercafe-docs",
+  "version": "1.0.0",
+  "description": "Application web de génération de documents pour Cybercafé",
+  "main": "index.html",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "cybercafe",
+    "documents",
+    "pdf",
+    "word",
+    "ia"
+  ],
+  "author": "Boussé Samassa",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "jspdf": "^2.5.1"
+  }
+}
